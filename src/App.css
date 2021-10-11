@@ -53,3 +53,21 @@
   color: inherit !important; 
   text-decoration: none !important;
 }
+
+.input-field {
+  margin: 10px 0px;
+}
+
+.product-form-numeric-container {
+  display: inline-flex;
+  margin-bottom: 10px ;
+  text-align: center;
+}
+
+.product-form-container {
+  text-align: center;
+}
+
+.right-margin {
+  margin-right: 10px;
+}

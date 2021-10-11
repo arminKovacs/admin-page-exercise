@@ -1,0 +1,64 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["warn"],
+        "react/prop-types": "off",
+        "semi" : ["warn", "never"],
+        "quotes" : ["warn", "single"],
+        "eol-last" : ["warn", "always"],
+        "no-multi-spaces" : "warn",
+        "no-multiple-empty-lines": "warn",
+        "object-curly-spacing" : ["warn", "always"],
+        "key-spacing": ["warn", { "beforeColon": false, "afterColon": true }],
+        "indent": ["warn", 2, { "SwitchCase": 1 }],
+        "comma-dangle": ["warn", "always-multiline"],
+        "jsx-quotes": [1, "prefer-double"],
+        "comma-spacing": [1, { "before": false, "after": true }],
+        "arrow-spacing": [1, { "before": true, "after": true }],
+        "space-in-parens": [1, "never"],
+        "func-call-spacing": [1, "never"],
+        "react/jsx-tag-spacing": [1, { "beforeSelfClosing": "always" }],
+        "react/jsx-no-useless-fragment": 1,
+        "react/jsx-props-no-multi-spaces": 1,
+        "react/jsx-boolean-value": [1, "never"],
+        "react/jsx-max-props-per-line": [1, { "when": "multiline" }],
+        "react/jsx-equals-spacing": [1, "never"],
+        "react/jsx-first-prop-new-line": [1],
+        "react/jsx-closing-bracket-location": [1, { "location": "tag-aligned" }],
+        "react/style-prop-object": "off",
+        "no-script-url": "off",
+        "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": true }],
+        "@typescript-eslint/no-non-null-assertion": [0],
+        "@typescript-eslint/explicit-module-boundary-types": [0],
+        "@typescript-eslint/explicit-function-return-type": [0],
+        "@typescript-eslint/no-unsafe-return": ["error"],
+        "linebreak-style": ["error", "unix"],
+        "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+        "@typescript-eslint/no-base-to-string": ["warn"],
+        "@typescript-eslint/consistent-type-imports" : ["error"],
+        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import AppLayout from '../components/AppLayout/AppLayout'
 import { Switch, Route } from 'react-router-dom'
+import ProductList from './pages/ProductList/ProductList'
 
 const Routes = () => {
   return (
@@ -8,7 +9,7 @@ const Routes = () => {
 
       <Route exact path="/" >
         <AppLayout pageHeaderTitle="Products">
-          List all products
+          <ProductList />
         </AppLayout>
       </Route>
 

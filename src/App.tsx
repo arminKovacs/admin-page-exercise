@@ -5,11 +5,14 @@ import { BrowserRouter } from 'react-router-dom'
 
 import 'normalize.css'
 import '@blueprintjs/core/lib/css/blueprint.css'
+import ProductsProvider from './components/ProductsProvider/ProductsProvider'
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes />
+      <ProductsProvider>
+        <Routes />
+      </ProductsProvider>
     </BrowserRouter>
   )
 }

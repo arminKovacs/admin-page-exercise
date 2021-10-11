@@ -48,3 +48,8 @@
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
+
+.link {
+  color: inherit !important; 
+  text-decoration: none !important;
+}

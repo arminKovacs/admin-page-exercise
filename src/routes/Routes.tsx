@@ -2,6 +2,7 @@ import React from 'react'
 import AppLayout from '../components/AppLayout/AppLayout'
 import { Switch, Route } from 'react-router-dom'
 import ProductList from './pages/ProductList/ProductList'
+import EditProduct from './pages/EditProduct/EditProduct'
 
 const Routes = () => {
   return (
@@ -15,7 +16,7 @@ const Routes = () => {
 
       <Route path="/edit-product" >
         <AppLayout pageHeaderTitle="Edit product">
-          Edit product
+          <EditProduct />
         </AppLayout>
       </Route>
 

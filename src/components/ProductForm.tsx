@@ -18,19 +18,17 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
     description: '',
     pricing: '',
     discount: 0,
-    price: 0,
+    price: 1,
     monthlySubs: 0,
   }), [])
   const { handleSubmit, control, formState: { errors }, reset } = useForm<Product>({ defaultValues, mode: 'onChange' })
 
   const submitData = useCallback((e) =>
     handleSubmit(data => {
-      console.log(data)
       onSubmit(data)
     })(e), [handleSubmit])
 
   useEffect(() => {
-    console.log(productToEdit)
     if (productToEdit) {
       reset({ ...productToEdit })
     }

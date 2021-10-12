@@ -7,17 +7,25 @@ const ProductList = () => {
   const { products } = useProducts()
 
   return (
-    <>
-      {products.map((product, index) => (
-        <div key={product.name}>
-          <ProductCard product={product} />
-          {
-            index !== (products.length - 1) &&
-            <Divider />
-          }
-        </div>
-      ))}
-    </>
+    <div>
+      {
+        products
+          ?
+          products.map((product, index) => (
+            <div key={product.name}>
+              <ProductCard product={product} />
+              {
+                index !== (products.length - 1) &&
+                <Divider />
+              }
+            </div>
+          ))
+          :
+          <div>
+            No products yet
+          </div>
+      }
+    </div>
   )
 }
 

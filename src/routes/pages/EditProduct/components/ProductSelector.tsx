@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 import type { Dispatch, SetStateAction, FC } from 'react'
 import type { ItemPredicate } from '@blueprintjs/select'
 import { Select } from '@blueprintjs/select'

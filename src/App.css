@@ -61,13 +61,23 @@
 .product-form-numeric-container {
   display: inline-flex;
   margin-bottom: 10px ;
-  text-align: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .product-form-container {
-  text-align: center;
+  padding: 20px 200px;
 }
 
 .right-margin {
   margin-right: 10px;
+}
+
+.submit-form-button {
+  margin-right: 10px;
+  width: 200px;
+}
+
+.form-submit-button-container {
+  text-align: center;
 }

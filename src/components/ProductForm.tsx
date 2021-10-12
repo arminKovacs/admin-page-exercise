@@ -40,9 +40,11 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
       <Controller
         control={control}
         name="name"
+        rules={{ required: 'This field is required' }}
         render={({ field }) => (
           <FormGroup
-            /* helperText="Helper text with details..." */
+            helperText={errors.name?.message}
+            intent={!!errors && errors.name ? 'danger' : 'none'}
             label="Product name"
             labelFor="name-input"
           >
@@ -58,9 +60,11 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
       <Controller
         control={control}
         name="description"
+        rules={{ required: 'This field is required' }}
         render={({ field }) => (
           <FormGroup
-            /* helperText="Helper text with details..." */
+            helperText={errors.description?.message}
+            intent={!!errors && errors.description ? 'danger' : 'none'}
             label="Description"
             labelFor="description-input"
           >
@@ -76,9 +80,11 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
       <Controller
         control={control}
         name="pricing"
+        rules={{ required: 'This field is required' }}
         render={({ field }) => (
           <FormGroup
-            /* helperText="Helper text with details..." */
+            helperText={errors.pricing?.message}
+            intent={!!errors && errors.pricing ? 'danger' : 'none'}
             label="Pricing"
             labelFor="name-input"
           >
@@ -95,14 +101,18 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
         <Controller
           control={control}
           name="price"
+          rules={{ validate: (value) => value >= 1 || 'Can\'t be smaller than 1' }}
           render={({ field }) => (
             <FormGroup
-              /* helperText="Helper text with details..." */
+              helperText={errors.price?.message}
+              intent={!!errors && errors.price ? 'danger' : 'none'}
               label="Price"
               labelFor="price-input"
             >
               <NumericInput
                 {...field}
+                allowNumericCharactersOnly
+                onValueChange={field.onChange}
                 leftIcon="tag"
                 min={1}
                 className="right-margin"
@@ -115,14 +125,18 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
         <Controller
           control={control}
           name="discount"
+          rules={{ validate: (value) => value <= 100 || 'Can\'t be bigger than 100' }}
           render={({ field }) => (
             <FormGroup
-              /* helperText="Helper text with details..." */
+              helperText={errors.discount?.message}
+              intent={!!errors && errors.discount ? 'danger' : 'none'}
               label="Discount"
               labelFor="discount-input"
             >
               <NumericInput
                 {...field}
+                allowNumericCharactersOnly
+                onValueChange={field.onChange}
                 leftIcon="percentage"
                 id="discount-input"
                 max={100}

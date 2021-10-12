@@ -53,3 +53,46 @@
   color: inherit !important; 
   text-decoration: none !important;
 }
+
+.input-field {
+  margin: 10px 0px;
+}
+
+.product-form-numeric-container {
+  display: inline-flex;
+  margin-bottom: 10px ;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-form-container {
+  padding: 20px 200px;
+}
+
+.right-margin {
+  margin-right: 10px;
+}
+
+.submit-form-button {
+  margin-right: 10px;
+  width: 200px;
+}
+
+.form-submit-button-container {
+  text-align: center;
+}
+
+.sort-buttons-container {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.center-text {
+  align-self: center;
+  margin-right: 10px;
+}
+
+.chart-container{
+  max-width: 1200px;
+  margin: auto;
+}

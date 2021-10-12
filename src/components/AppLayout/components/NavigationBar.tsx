@@ -23,6 +23,10 @@ const NavigationBar = () => {
           <Button className="bp3-minimal" icon="add" text="Add new product" />
         </Link>
 
+        <Link to="/analytics" className="link">
+          <Button className="bp3-minimal" icon="chart" text="Analytics" />
+        </Link>
+
       </Navbar.Group>
     </Navbar>
   )

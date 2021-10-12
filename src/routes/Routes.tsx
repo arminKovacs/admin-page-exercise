@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import ProductList from './pages/ProductList/ProductList'
 import EditProduct from './pages/EditProduct/EditProduct'
 import AddProduct from './pages/AddProduct/AddProduct'
+import Analytics from './pages/Analytics/Analytics'
 
 const Routes = () => {
   return (
@@ -24,6 +25,12 @@ const Routes = () => {
       <Route path="/add-product" >
         <AppLayout pageHeaderTitle="Add product">
           <AddProduct />
+        </AppLayout>
+      </Route>
+
+      <Route path="/analytics" >
+        <AppLayout pageHeaderTitle="Analytics">
+          <Analytics />
         </AppLayout>
       </Route>
 

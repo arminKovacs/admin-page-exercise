@@ -81,3 +81,13 @@
 .form-submit-button-container {
   text-align: center;
 }
+
+.sort-buttons-container {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.center-text {
+  align-self: center;
+  margin-right: 10px;
+}

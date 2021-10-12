@@ -1,8 +1,8 @@
-import React, { useCallback, useMemo, useEffect } from 'react'
+import React, { useCallback, useMemo, useEffect, useRef } from 'react'
 import type { FC } from 'react'
 import type { Product } from '../models/Product'
 import { useForm, Controller } from 'react-hook-form'
-import { Button, FormGroup, InputGroup, NumericInput } from '@blueprintjs/core'
+import { Button, FormGroup, InputGroup, Intent, NumericInput, Position, Toaster } from '@blueprintjs/core'
 import useProducts from '../hooks/useProducts'
 
 interface Props {
@@ -22,10 +22,16 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
     monthlySubs: 0,
   }), [])
   const { handleSubmit, control, formState: { errors }, reset } = useForm<Product>({ defaultValues, mode: 'onChange' })
+  const toasterRef = useRef<Toaster>(null)
 
   const submitData = useCallback((e) =>
     handleSubmit(data => {
       onSubmit(data)
+      toasterRef.current?.show({
+        intent: Intent.SUCCESS,
+        message: 'Request sent',
+        timeout: 2000,
+      })
     })(e), [handleSubmit])
 
   useEffect(() => {
@@ -154,6 +160,8 @@ const ProductForm: FC<Props> = ({ productToEdit, onSubmit }) => {
           type="submit"
         />
       </div>
+
+      <Toaster position={Position.BOTTOM} ref={toasterRef} />
 
     </form>
   )

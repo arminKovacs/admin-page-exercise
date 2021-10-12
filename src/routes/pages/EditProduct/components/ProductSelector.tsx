@@ -5,7 +5,7 @@ import { Select } from '@blueprintjs/select'
 import type { Product } from '../../../../models/Product'
 import useProducts from '../../../../hooks/useProducts'
 import { Button, MenuItem } from '@blueprintjs/core'
-import SelectProductMenuItem from './SelectProductMenuItem'
+import RenderSelectProductMenuItem from './RenderSelectProductMenuItem'
 
 interface Props {
   productToEdit?: Product
@@ -28,7 +28,7 @@ const ProductSelector: FC<Props> = ({ setProductToEdit, productToEdit }) => {
   return (
     <ProductSelect
       items={products}
-      itemRenderer={SelectProductMenuItem}
+      itemRenderer={RenderSelectProductMenuItem}
       itemPredicate={filterProduct}
       noResults={<MenuItem disabled text="No results." />}
       onItemSelect={selectProductToEdit}
